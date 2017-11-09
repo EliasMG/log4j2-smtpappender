@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<Configuration status="trace">
+	<Appenders>
+		 <SMTP 
+		 		name="Mail" 
+		 		subject="Error Log"
+		 		from="user@gmail.com" 
+		 		to="user@gmail.com"
+				smtpHost="smtp.gmail.com" 
+				smtpPort="465"
+				bufferSize="50"
+				smtpUsername="user" 
+				smtpPassword="xxxxxx" 
+				ignoreExceptions="flase"
+				smtpProtocol="smtps">
+    	</SMTP>
+	</Appenders>
+
+	<Loggers>
+		<Root level="error">
+			<AppenderRef ref="Mail" />
+		</Root>
+	</Loggers>
+</Configuration>   
